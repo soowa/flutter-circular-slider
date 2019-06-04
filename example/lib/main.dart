@@ -93,10 +93,10 @@ class _SleepPageState extends State<SleepPage> {
           baseColor: Color.fromRGBO(255, 255, 255, 0.1),
           selectionColor: baseColor,
           handlerColor: Colors.white,
-          handlerOutterRadius: 12.0,
+          handlerOuterRadius: 12.0,
           onSelectionChange: _updateLabels,
           showRoundedCapInSelection: true,
-          showHandlerOutter: false,
+          showHandlerOuter: false,
           child: Padding(
             padding: const EdgeInsets.all(12.0),
             child: Center(
@@ -115,7 +115,7 @@ class _SleepPageState extends State<SleepPage> {
         //   baseColor: Color.fromRGBO(255, 255, 255, 0.1),
         //   selectionColor: baseColor,
         //   handlerColor: Colors.white,
-        //   handlerOutterRadius: 12.0,
+        //   handlerOuterRadius: 12.0,
         //   onSelectionChange: _updateLabels,
         //   child: Padding(
         //     padding: const EdgeInsets.all(12.0),

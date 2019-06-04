@@ -50,11 +50,11 @@ class DoubleCircularSlider extends StatefulWidget {
   /// (int init, int end) => void
   final Function onSelectionChange;
 
-  /// outter radius for the handlers
-  final double handlerOutterRadius;
+  /// outer radius for the handlers
+  final double handlerOuterRadius;
 
   /// if true an extra handler ring will be displayed in the handler
-  final bool showHandlerOutter;
+  final bool showHandlerOuter;
 
   DoubleCircularSlider(
     this.divisions,
@@ -69,8 +69,8 @@ class DoubleCircularSlider extends StatefulWidget {
     this.selectionColor,
     this.handlerColor,
     this.onSelectionChange,
-    this.handlerOutterRadius,
-    this.showHandlerOutter,
+    this.handlerOuterRadius,
+    this.showHandlerOuter,
   })  : assert(init >= 0 && init <= divisions,
             'init has to be > 0 and < divisions value'),
         assert(end >= 0 && end <= divisions,
@@ -119,9 +119,9 @@ class _DoubleCircularSliderState extends State<DoubleCircularSlider> {
           selectionColor:
               widget.selectionColor ?? Color.fromRGBO(255, 255, 255, 0.3),
           handlerColor: widget.handlerColor ?? Colors.white,
-          handlerOutterRadius: widget.handlerOutterRadius ?? 12.0,
+          handlerOuterRadius: widget.handlerOuterRadius ?? 12.0,
           showRoundedCapInSelection: false,
-          showHandlerOutter: widget.showHandlerOutter ?? true,
+          showHandlerOuter: widget.showHandlerOuter ?? true,
         ));
   }
 }

@@ -1,6 +1,6 @@
 ## [2.1.0] - 2019-06-03
 
-- Add showRoundedCapInSelection and showHandlerOutter configuration parameters.
+- Add showRoundedCapInSelection and showHandlerOuter configuration parameters.
 
 ## [2.0.0] - 2019-05-31
 

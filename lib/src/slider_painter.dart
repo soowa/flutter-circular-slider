@@ -12,9 +12,9 @@ class SliderPainter extends CustomPainter {
   double sweepAngle;
   Color selectionColor;
   Color handlerColor;
-  double handlerOutterRadius;
+  double handlerOuterRadius;
   bool showRoundedCapInSelection;
-  bool showHandlerOutter;
+  bool showHandlerOuter;
 
   Offset initHandler;
   Offset endHandler;
@@ -28,9 +28,9 @@ class SliderPainter extends CustomPainter {
     @required this.sweepAngle,
     @required this.selectionColor,
     @required this.handlerColor,
-    @required this.handlerOutterRadius,
+    @required this.handlerOuterRadius,
     @required this.showRoundedCapInSelection,
-    @required this.showHandlerOutter,
+    @required this.showHandlerOuter,
   });
 
   @override
@@ -44,19 +44,19 @@ class SliderPainter extends CustomPainter {
         -pi / 2 + startAngle, sweepAngle, false, progress);
 
     Paint handler = _getPaint(color: handlerColor, style: PaintingStyle.fill);
-    Paint handlerOutter = _getPaint(color: handlerColor, width: 2.0);
+    Paint handlerOuter = _getPaint(color: handlerColor, width: 2.0);
 
     // draw handlers
     if (mode == CircularSliderMode.doubleHandler) {
       initHandler = radiansToCoordinates(center, -pi / 2 + startAngle, radius);
       canvas.drawCircle(initHandler, 8.0, handler);
-      canvas.drawCircle(initHandler, handlerOutterRadius, handlerOutter);
+      canvas.drawCircle(initHandler, handlerOuterRadius, handlerOuter);
     }
 
     endHandler = radiansToCoordinates(center, -pi / 2 + endAngle, radius);
     canvas.drawCircle(endHandler, 8.0, handler);
-    if (showHandlerOutter) {
-      canvas.drawCircle(endHandler, handlerOutterRadius, handlerOutter);
+    if (showHandlerOuter) {
+      canvas.drawCircle(endHandler, handlerOuterRadius, handlerOuter);
     }
   }
 

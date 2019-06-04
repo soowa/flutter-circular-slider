@@ -94,9 +94,9 @@ There are two different options:
 | baseColor                 |    Color.fromRGBO(255, 255, 255, 0.1)     | The color used for the base of the circle.                                                                              |
 | selectionColor            |    Color.fromRGBO(255, 255, 255, 0.3)     | The color used for the selection in the circle.                                                                         |
 | handlerColor              |               Colors.white                | The color used for the handlers.                                                                                        |
-| handlerOutterRadius       |                   12.0                    | The radius for the outter circle around the handler.                                                                    |
+| handlerOuterRadius       |                   12.0                    | The radius for the outer circle around the handler.                                                                    |
 | showRoundedCapInSelection |                   false                   | (Only for SingleCircularSlider) Shows a rounded cap at the edge of the selection slider with no handler.                |
-| showHandlerOutter         |                   true                    | If true will display an extra ring around the handlers.                                                                 |
+| showHandlerOuter         |                   true                    | If true will display an extra ring around the handlers.                                                                 |
 
 ### Use Cases
 
@@ -194,7 +194,7 @@ class _SleepPageState extends State<SleepPage> {
           baseColor: Color.fromRGBO(255, 255, 255, 0.1),
           selectionColor: baseColor,
           handlerColor: Colors.white,
-          handlerOutterRadius: 12.0,
+          handlerOuterRadius: 12.0,
           onSelectionChange: _updateLabels,
           child: Padding(
             padding: const EdgeInsets.all(12.0),

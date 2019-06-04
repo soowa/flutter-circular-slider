@@ -18,10 +18,10 @@ class CircularSliderPaint extends StatefulWidget {
   final Color baseColor;
   final Color selectionColor;
   final Color handlerColor;
-  final double handlerOutterRadius;
+  final double handlerOuterRadius;
   final Widget child;
   final bool showRoundedCapInSelection;
-  final bool showHandlerOutter;
+  final bool showHandlerOuter;
 
   CircularSliderPaint({
     @required this.mode,
@@ -35,9 +35,9 @@ class CircularSliderPaint extends StatefulWidget {
     @required this.baseColor,
     @required this.selectionColor,
     @required this.handlerColor,
-    @required this.handlerOutterRadius,
+    @required this.handlerOuterRadius,
     @required this.showRoundedCapInSelection,
-    @required this.showHandlerOutter,
+    @required this.showHandlerOuter,
   });
 
   @override
@@ -126,9 +126,9 @@ class _CircularSliderState extends State<CircularSliderPaint> {
       sweepAngle: _sweepAngle,
       selectionColor: widget.selectionColor,
       handlerColor: widget.handlerColor,
-      handlerOutterRadius: widget.handlerOutterRadius,
+      handlerOuterRadius: widget.handlerOuterRadius,
       showRoundedCapInSelection: widget.showRoundedCapInSelection,
-      showHandlerOutter: widget.showHandlerOutter,
+      showHandlerOuter: widget.showHandlerOuter,
     );
   }
 
@@ -172,11 +172,11 @@ class _CircularSliderState extends State<CircularSliderPaint> {
         }
       } else {
         _isInitHandlerSelected = isPointInsideCircle(
-            position, _painter.initHandler, widget.handlerOutterRadius);
+            position, _painter.initHandler, widget.handlerOuterRadius);
 
         if (!_isInitHandlerSelected) {
           _isEndHandlerSelected = isPointInsideCircle(
-              position, _painter.endHandler, widget.handlerOutterRadius);
+              position, _painter.endHandler, widget.handlerOuterRadius);
         }
       }
     }
