@@ -166,9 +166,17 @@ class _CircularSliderState extends State<CircularSliderPaint> {
     var position = renderBox.globalToLocal(details);
     if (position != null) {
       if (isSingleHandler) {
-        if (isPointAlongCircle(position, _sliderRadius)) {
-          _isEndHandlerSelected = true;
-          _onPanUpdate(details);
+
+        _isEndHandlerSelected = isPointInsideCircle(
+            position, _painter.endHandler, widget.handlerOuterRadius);
+
+        if(_isEndHandlerSelected) {
+            _onPanUpdate(details);
+        }
+
+        //if (isPointAlongCircle(position, _sliderRadius)) {
+        //  _isEndHandlerSelected = true;
+        //  _onPanUpdate(details);
         }
       } else {
         _isInitHandlerSelected = isPointInsideCircle(
